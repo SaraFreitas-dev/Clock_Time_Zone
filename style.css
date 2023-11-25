@@ -17,11 +17,12 @@
 .container {
     max-width: 800px;
     width: 70%;
-    height: 180px;
+    /*height: 180px;*/
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -90%);
+    transform: translate(-50%, -50%);
+    box-sizing: content-box;
 }
 
 
@@ -35,7 +36,6 @@
     font-size: 4.5vw;
     text-align: center;
     position: relative; 
-    
 }
 
 
@@ -78,8 +78,8 @@
     background: #419aff;
     border-radius: 50%;
     position: absolute;
-    right: -10%;
-    bottom: -110%;
+    right: -50px;
+    bottom: -50px;
     z-index: -1;
 }
 
@@ -105,16 +105,59 @@
         content: '';
         width: 120px;
         height: 120px;
-        left: -10%;
     }
 
     .container::after {
         content: '';
         width: 120px;
         height: 120px;
+    
     }
 
     .row {
         flex-direction: column;
     }
 }
+
+
+
+
+@media (max-width: 540px) {
+
+    .container{
+        width: 60%;
+    }
+
+    .container::before {
+        content: '';
+        width:  70px;
+        height:  70px;
+        top: -20px;
+        left: -20px;
+    }
+
+    .container::after {
+        content: '';
+        width: 70px;
+        height: 70px;
+        bottom: -20px;
+        right: -20px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    
+
+}
+
+
+@media (min-width: 1926px) {
+
+    .title {
+        font-size: 2.5vw;
+    }
+
+}
+
