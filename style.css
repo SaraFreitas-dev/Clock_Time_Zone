@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+
 .hero {
     width: 100%;
     min-height: 100vh;
@@ -12,6 +13,7 @@
     color: #fff;
     position: relative;
 }
+
 
 .container {
     max-width: 800px;
@@ -22,6 +24,7 @@
     left: 50%;
     transform: translate(-50%, -90%);
 }
+
 
 .space {
     padding: 1%;
@@ -53,6 +56,8 @@
     flex-direction: column;
 }
 
+
+
 .container::before {
     content: '';
     width: 180px;
@@ -64,6 +69,8 @@
     top: -50px;
     z-index: -1;
 }
+
+
 
 .container::after {
     content: '';
@@ -77,15 +84,22 @@
     z-index: -1;
 }
 
+
+
 .row {
     display: flex;
     gap: 10px;
 }
 
+
+
 .title {
     font-size: 3vw;
     font-weight:900;
 }
+
+
+
 
 @media (max-width: 768px) {
     .container::before {
