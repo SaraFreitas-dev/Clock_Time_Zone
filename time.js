@@ -1,4 +1,30 @@
-// Function to update time for a specific country
+function updateTime(countryId, hrsId, minId, secId, timeZone) {
+    let hrs = document.getElementById(hrsId);
+    let min = document.getElementById(minId);
+    let sec = document.getElementById(secId);
+
+    setInterval(() => {
+        let countryTime = new Date().toLocaleTimeString('en-US', { timeZone: timeZone });
+        let [hours, minutes, seconds] = countryTime.split(":");
+        
+        hrs.innerHTML = (hours < 10 ? "0" : "") + hours;
+        min.innerHTML = minutes;
+        sec.innerHTML = seconds;
+    }, 1000);
+}
+
+
+updateTime("frClock", "frHrs", "frMin", "sec", "Europe/Paris"); // Time zone for France
+updateTime("ptClock", "ptHrs", "ptMin", "sec", "Europe/Lisbon"); // Time zone for Oporto
+updateTime("nwClock", "nwHrs", "nwMin", "sec", "America/New_York"); // Time zone for New York
+updateTime("hkClock", "hkHrs", "hkMin", "sec", "Asia/Hong_Kong"); // Time zone for Hong Kong
+
+
+
+
+
+
+/* Function to update time for a specific country
 function updateTime(countryId, hrsId, minId, secId, offset) {
     let hrs = document.getElementById(hrsId);
     let min = document.getElementById(minId);
@@ -27,3 +53,4 @@ updateTime("nwClock", "nwHrs", "nwMin", "sec", -5); // Example offset for New Yo
 updateTime("hkClock", "hkHrs", "hkMin", "sec", 8); // Example offset for Hong Kong
 
 
+*/
