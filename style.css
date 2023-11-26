@@ -115,12 +115,12 @@
 
 .container::before {
     /* ... Other styles ... */
-    animation: initAnimation 4s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* timing function */
+    animation: initAnimation 2.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* timing function */
 }
 
 .container::after {
     /* ... Other styles ... */
-    animation: initAnimation 4s cubic-bezier(0.68, -0.55, 0.27, 1.55); 
+    animation: initAnimation 2.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); 
 }
 
 
