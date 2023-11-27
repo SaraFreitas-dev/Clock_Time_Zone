@@ -4,10 +4,10 @@ function updateTime(countryId, hrsId, minId, secId, timeZone) {
     let sec = document.getElementById(secId);
 
     setInterval(() => {
-        let countryTime = new Date().toLocaleTimeString('en-US', { timeZone: timeZone });
+        let countryTime = new Date().toLocaleTimeString('en-US', { timeZone: timeZone, hour12: false  });
         let [hours, minutes, seconds] = countryTime.split(":");
         
-        hrs.innerHTML = (hours < 10 ? "0" : "") + hours;
+        hrs.innerHTML = hours;
         min.innerHTML = minutes + (hours < 12 ? " am" : " pm");
         sec.innerHTML = seconds;
 
