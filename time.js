@@ -8,8 +8,9 @@ function updateTime(countryId, hrsId, minId, secId, timeZone) {
         let [hours, minutes, seconds] = countryTime.split(":");
         
         hrs.innerHTML = (hours < 10 ? "0" : "") + hours;
-        min.innerHTML = minutes;
+        min.innerHTML = minutes + (hours < 12 ? " am" : " pm");
         sec.innerHTML = seconds;
+
     }, 1000);
 }
 
